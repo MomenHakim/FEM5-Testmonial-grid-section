@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+  font-size: 13px;
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+body {
+  background-color: hsl(0, 0%, 81%);
+}
+.container {
+  width: 75%;
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: repeat(4, 25%);
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas:
+    "C1 C1 C2 C5"
+    "C3 C4 C4 C5";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.box {
+  border-radius: 12px;
+  padding: 20px 25px 10px 25px;
+}
+#C1 {
+  position: relative;
+  color: hsl(0, 0%, 81%);
+  grid-area: C1;
+  background-color: hsl(263, 55%, 52%);
+}
+.overlay {
+  position: absolute;
+  top: 20%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  background-image: url(images/bg-pattern-quotation.svg);
+}
+#C2 {
+  color: hsl(0, 0%, 81%);
+  grid-area: C2;
+  background-color: hsl(217, 19%, 35%);
+}
+#C3 {
+  color: hsl(217, 19%, 35%);
+  grid-area: C3;
+  background-color: white;
+}
+#C4 {
+  color: hsl(0, 0%, 81%);
+  grid-area: C4;
+  background-color: hsl(219, 29%, 14%);
+}
+#C5 {
+  color: hsl(217, 19%, 35%);
+  grid-area: C5;
+  background-color: white;
+}
+.info img {
+  width: 30px;
+  border-radius: 100%;
+  border: 2px solid rgba(255, 255, 255, 0.404);
+  float: left;
+}
+.info {
+  display: inline-flex;
+}
+.name {
+  font-weight: 600;
+  margin-left: 10px;
+}
+.name span {
+  opacity: 70%;
+}
+h2 {
+  position: relative;
+  font-size: 1.5em;
+  font-weight: 600;
+  z-index: 5;
+}
+p {
+  opacity: 70%;
+  line-height: 1.5em;
+}
+@media only screen and (max-width: 800px) {
+  .container {
+    width: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 4%;
+  }
+}
